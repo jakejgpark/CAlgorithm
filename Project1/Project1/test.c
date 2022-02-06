@@ -1,11 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 #pragma warning(disable:4996)
-
-
 int main(void)
 {
-	int numArr[10] = { 11,22,33,44,55,66,77,88,99,0 };
-	printf("%d", sizeof(numArr));
-	printf("%d", sizeof(numArr)/sizeof(int));
+	char input[10] = "He";
+	char result[5] = "Love";
+	strcpy(result, input);
+	printf("%s", result);
 	return 0;
 }
