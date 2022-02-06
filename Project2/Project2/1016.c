@@ -2,7 +2,8 @@
 #pragma warning(disable:4996)
 int main(void)
 {
-	int year = 20;
-	printf("10진수로 %d년, 16진수로 %x년",year,year);
+	int a;
+	scanf("%d", &a);
+	printf("%d %d %d",a,a,a);
 	return 0;
 }

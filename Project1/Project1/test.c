@@ -1,11 +1,26 @@
 #include <stdio.h>
-#pragma warning(disable:4996)
+
+
+
+struct student {
+	int number;
+	char name[10];
+	double grade;
+};
 
 
 int main(void)
 {
-	int numArr[10] = { 11,22,33,44,55,66,77,88,99,0 };
-	printf("%d", sizeof(numArr));
-	printf("%d", sizeof(numArr)/sizeof(int));
+	struct student s;
+
+	printf("학번을 입력하세요 :");
+	scanf("%d", &s.number);
+	printf("이름을 입력하세요 :");
+	scanf("%s", s.name); #배열은 그 자체로 어드레스
+	printf("학점을 입력하세요 :");
+	scanf("%lf", &s.grade);
+	printf("학번: %d\n",s.number);
+	printf("이름: %s\n", s.name);
+	printf("학점: %.1f\n", s.grade);
 	return 0;
 }

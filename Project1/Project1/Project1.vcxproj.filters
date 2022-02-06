@@ -27,9 +27,6 @@
     <ClCompile Include="1110.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="10181_1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -37,6 +34,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2577.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
