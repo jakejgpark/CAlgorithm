@@ -1,39 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#pragma warning(disable:4996)
-
-
 
 int main(void)
 {
-	int i, x, y;
-	int** pptr = (int**)malloc(sizeof(int) * 8);
-	for (i = 0; i < 8; i++)
+	int num1 = 1;
+	int num2 = 1;
+	while (num1 < 10)
 	{
-		*(pptr + i) = (int*)malloc(sizeof(int) * 6);
-	}
-
-	for (y = 0; y < 8; y++)
-	{
-		for (x = 0; x < 6; x++)
+		num2 = 1;
+		while (num2 < 10)
 		{
-			*(*(pptr + y) + x) = 6 * y + x;
+			printf("%dx%d=%d \n", num1, num2, num1 * num2);
+			num2++;
 		}
-	}
-
-	for (y = 0; y < 8; y++)
-	{
-		for (x = 0; x < 6; x++)
-		{
-			printf("%3d", *(*(pptr + y) + x));
-		}
-		printf("\n");
-	}
-
-	for (y = 0; y < 8; y++)
-	{
-		free(*(pptr + y));
+		num1++;
 	}
 	return 0;
 }
