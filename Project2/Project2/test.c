@@ -2,12 +2,12 @@
 #pragma warning(disable:4996)
 int main()
 {
-	int num1 = 100;
-	int* ptr;
-
-	ptr = &num1;
-	printf("0x%p\n", num1);
-	printf("%d", *ptr);
+	int a = 2;
+	while (a)
+	{
+		printf("%d\n", a);
+		a--;
+	}
 
 	return 0;
 }
