@@ -1,13 +1,12 @@
 #include <stdio.h>
-#pragma warning(disable:4996)
-int main()
+#include <string.h>
+
+typedef struct person {int x; int y;} Person;
+
+int main(void)
 {
-	int a = 2;
-	while (a)
-	{
-		printf("%d\n", a);
-		a--;
-	}
+	Person p1[3];
 
 	return 0;
 }
+	
