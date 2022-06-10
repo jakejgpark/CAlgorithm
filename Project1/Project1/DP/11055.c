@@ -8,13 +8,18 @@ int dp[1010]={};
 
 void input()
 {
+
 	scanf("%d", &n);
+	
 	dp[0]=arr[0]=0;
 	for (int i=1; i<n+1; i++)
 	{
 		scanf("%d",&arr[i]);
 	}	
-	dp[1]=arr[1];
+	for (int i=1; i<n+1; i++)
+	{
+		dp[i]=arr[i];
+	}
 }
 
 void solution()
@@ -46,20 +51,20 @@ int main(void)
 		}
 	}
 	
-	printf("%d\n", dpmax);
-	
-	printf("arr");
-	for (int i=0; i<n+1; i++)
-	{
-		printf("%d ", arr[i]);
-	}
-	printf("\n");
-	printf("dp");
-	for (int j=0; j<n+1; j++)
-	{
-		printf("%d ", dp[j]);
-	}
-	printf("\n");
+	printf("%d", dpmax);
+//	
+//	printf("arr");
+//	for (int i=0; i<n+1; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//	printf("dp");
+//	for (int j=0; j<n+1; j++)
+//	{
+//		printf("%d ", dp[j]);
+//	}
+//	printf("\n");
 	
 	return 0;
 }
