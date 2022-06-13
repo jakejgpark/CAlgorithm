@@ -19,7 +19,7 @@ int main(void)
 	{
 		for(int i=1; i<n+1; i++)
 		{
-
+			if 
 		}
 	}
 	printf("%d", dp[n]);
