@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef long long unsigned INT;
-INT dp[110]={0};
-INT n;
-INT T;
+//typedef unsigned long long INT;
+int dp[110]={0};
+int n;
+int T;
 
 void input()
 {
@@ -20,10 +20,10 @@ int main(void)
 	dp[4]=2;
 	dp[5]=2;
 	scanf("%d",&T);
-	for(INT i=0; i<T; i++)
+	for(int i=0; i<T; i++)
 	{
 		input();
-		for (INT j=6; j<n+1; j++)
+		for (int j=6; j<n+1; j++)
 		{
 			dp[j]=dp[j-1]+dp[j-5];
 			if(dp[j]<0)
