@@ -9,6 +9,10 @@ int dp_max;
 void input()
 {
 	scanf("%d",&N);
+<<<<<<< HEAD
+=======
+	arr[0]=dp[0]=1;
+>>>>>>> c549d4224518a28487d2b1864bec2ec47006f63b
 	for (int i=1; i<N+1; i++)
 	{
 	scanf("%d", &arr[i]);
@@ -18,7 +22,11 @@ void input()
 //	for (int i=0; i<N+1; i++)
 //	{
 //		printf("%d ", dp[i]);
+<<<<<<< HEAD
 //	} 
+=======
+//	}
+>>>>>>> c549d4224518a28487d2b1864bec2ec47006f63b
 }
 
 int main()
@@ -39,6 +47,7 @@ int main()
 	
 	for (int i=1; i<N+1; i++)
 	{
+<<<<<<< HEAD
 		if (dp[i-1]<=dp[i])
 		{
 			dp_max=MAX(dp_max,dp[i]);
@@ -46,6 +55,15 @@ int main()
 	}
 	
 	printf("%d", dp_max);	
+=======
+		if (dp[i-1]<dp[i])
+		{
+			dp_max=dp[i];
+		}
+	}
+	
+	printf("%d\n", dp_max);	
+>>>>>>> c549d4224518a28487d2b1864bec2ec47006f63b
 //	for (int i=1; i<N+1; i++)
 //	{
 //		printf("%d ", dp[i]);

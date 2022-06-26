@@ -1,18 +1,61 @@
-#define _CRT_SECURE_NO_WARNINGS    // strcpy 보안 경고로 인한 컴파일 에러 방지
 #include <stdio.h>
-#include <string.h>    // strcpy 함수가 선언된 헤더 파일
-#include <stdlib.h>    // malloc, free 함수가 선언된 헤더 파일
-#define p1 (0xf002000)
+#include <string.h>
+#define MAX(a,b) (((a)>(b))? (a):(b))
 
-struct Person {    // 구조체 정의
-    char name[20];        // 구조체 멤버 1
-    int age;              // 구조체 멤버 2
-    char address[100];    // 구조체 멤버 3
-};
 
-int main()
+int main(void)
 {
-    (struct Person *) p1;    // 구조체 포인터 선언, 메모리 할당
+	int n;
+	scanf("%d",&n);
+	int arr[1010]={0,};
+	int dp[1010]={1,};
+	int dp_max=1;
 	
-    return 0;
+	for (int i=0; i<n+1; i++)
+	{
+		dp[i]=1;
+	}
+	
+	for (int i=1; i<n+1; i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	
+	for (int i=2; i<n+1; i++)
+	{
+		if (i==2 && (arr[i]>arr[i-1]))
+		{
+			dp[i]=2;
+		}
+		else
+		{
+			for (int j = 1; j<i; j++)
+			{
+				if (arr[i]>arr[j])
+				{
+					dp[i]=MAX(dp[i],dp[j]+1);
+				}
+			}
+		}
+	}
+	
+	for (int i=1; i<n+1; i++)
+	{
+		printf("%d ",dp[i]);
+	}
+	
+//	for (int i=2; i<n+1; i++)
+//	{
+//		if (dp[i]>=dp[i-1])
+//		{
+//			dp_max=MAX(dp_max,dp[i]);
+//		}
+//	}
+//	
+//	printf("%d",dp_max);
+	
+	
+
+	return 0;
 }
+
