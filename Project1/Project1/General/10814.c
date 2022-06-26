@@ -3,8 +3,7 @@
 
 typedef struct {
 	int age;
-	int index;
-	char name[200];
+	char name[101];
 } person;
 
 int compare (const void* a, const void* b)
@@ -22,16 +21,8 @@ int compare (const void* a, const void* b)
 	}
 	else
 	{
-		if (A.index<B.index)
-		{
-			return -1;
-		}
-		else
-		{
-			return 1;
-		}
-	return 0;
-}
+		return 0;
+	}
 }
 
 int main()
@@ -43,7 +34,6 @@ int main()
 	while (i<n)
 	{
 		scanf("%d %s", &p[i].age, p[i].name);
-		p[i].index=i;
 		i++;
 	}
 	i=0;
