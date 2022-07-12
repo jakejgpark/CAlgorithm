@@ -15,7 +15,6 @@ int compare(const void* a, const void* b)
 		return -1;
 	else if (A>B)
 		return 1;
-
 	return 0;
 }
 	
@@ -23,12 +22,14 @@ int compare(const void* a, const void* b)
 int main(void)
 {
 	scanf("%d %d", &N, &K);
-		
-	for (int i=0; i<N; i++)
-		scanf("%d",&arr[i]);
-	qsort(arr,N,sizeof(int),compare);
-	printf("%d", arr[K]);
 	
+	for (int i=0; i<N; i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+
+	qsort(arr,N,sizeof(int),compare);
+	printf("%d", arr[K-1]);
 
 	return 0;
 }

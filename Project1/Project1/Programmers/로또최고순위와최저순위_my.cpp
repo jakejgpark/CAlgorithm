@@ -13,60 +13,60 @@ int* solution(int lottos[], size_t lottos_len, int win_nums[], size_t win_nums_l
     int min_rank=0;
     int max_rank=0;
     int* answer = (int*)malloc(sizeof(int)*2);
-    
+
     for (int i=0; i<lottos_len; i++)
     {
-    	if (lottos[i]==0)
-    	{
-    		count_zero++;
-    	}
+        if (lottos[i]==0)
+        {
+            count_zero++;
+        }
     }
-    
+
     for (int i=0; i<lottos_len; i++)
     {
-    	for (int j=0; j<win_nums_len; j++)
-    	{
-    		if (lottos[i]==win_nums[j])
-    			count++;
-    	}
+        for (int j=0; j<win_nums_len; j++)
+        {
+            if (lottos[i]==win_nums[j])
+                count++;
+        }
     }
     min=count;
     max=count+count_zero;
-    
+
     if (min==0 || min==1)
     {
-    	min_rank=6;
+        min_rank=6;
     }
     else
     {
-    	min_rank=7-min;
+        min_rank=7-min;
     }
- 
+
     if (max==0 || max==1)
     {
-    	max_rank=6;
+        max_rank=6;
     }
     else
     {
-    	max_rank=7-max;
-    }  	
-    
+        max_rank=7-max;
+    }   
+
     int minmax[2] = {max_rank, min_rank};
-    
+
     answer[0]=max_rank;
     answer[1]=min_rank;
-    
+
     return answer;
 }
 
 
 int main()
 {
-	int a=0;
-	int lo[6]={45, 4, 35, 20, 3, 9};
-	int win[6]={20, 9, 3, 45, 4, 35};
-	int* ans;
-	ans=solution(lo,sizeof(lo)/sizeof(int),win,sizeof(win)/sizeof(int));
-	
-	return 0;
+    int a=0;
+    int lo[6]={45, 4, 35, 20, 3, 9};
+    int win[6]={20, 9, 3, 45, 4, 35};
+    int* ans;
+    ans=solution(lo,sizeof(lo)/sizeof(int),win,sizeof(win)/sizeof(int));
+
+    return 0;
 }

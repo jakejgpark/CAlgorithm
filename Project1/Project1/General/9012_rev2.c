@@ -4,11 +4,13 @@
 
 int main(){
 	int T;
+	oi
 	scanf("%d",&T);
-	int cnt=0;
+	
 	for(int i = 0; i<T; i++)
 	{
 		char arr[51];
+		int cnt=0;
 		scanf("%s", arr);
 		
 		for (int i=0; i<strlen(arr); i++)
@@ -20,6 +22,7 @@ int main(){
 				
 			if (cnt<0)
 			{
+				printf("NO\n");
 				break;
 			}
 		}

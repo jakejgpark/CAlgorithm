@@ -15,30 +15,20 @@ int main(){
 		for (int i=0; i<strlen(arr); i++)
 		{
 			if (arr[i]=='(')
-			{
 				cnt++;
-	//			printf("Good");
-			}
 			else if (arr[i]==')')
-			{
 				cnt--;
-			}
 			if (cnt<0)
 			{
 				printf("NO\n");
 				break;
 			}
-			
 			if (i==(strlen(arr)-1))
 			{
 				if (cnt==0)
-				{
 					printf("YES\n");
-				}
 				else
-				{
 					printf("NO\n");
-				}
 			}
 		}
 	}
