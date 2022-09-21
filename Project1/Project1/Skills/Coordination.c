@@ -16,7 +16,7 @@ int main()
 	A.y=2;
 	B.x=3;
 	B.y=4;
-	coord* ptr;
+	coord* ptr=&A;
 	
 	printf("%d",ptr->x);
 	
