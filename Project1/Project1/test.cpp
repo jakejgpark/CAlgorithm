@@ -1,14 +1,23 @@
 #include <iostream>
+#define MAX 101
 using namespace std;
 
-int main(void)
+int n;
+int res;
+
+int factorial(int a)
 {
-	char str[100];
-	char str2[100];
-	
-	cin.getline(str,100);
-	cin.getline(str2,100);
-	std::cout<<"Ãâ·Â: "<<str<<str2;
-	return 0;
+	if (a<=1) return 1;
+	return a*factorial(a-1);
+}
+
+int main()
+{
+	cin>>n;
+	res=factorial(n);
+	cout<<res;
+
+
+    return 0;
 }
 

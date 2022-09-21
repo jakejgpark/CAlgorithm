@@ -1,14 +1,13 @@
 #include <iostream>
 #include <string>
-using namespace std;
+#include <cstring>
 
 int main()
 {
-	string s;
-	string s1;
-	getline(cin,s);
-	cin>>s1;
-	cout<<s+s1<<endl;
+	char str[100];
+	int cnt=0;
+	scanf("%s", str);
+	printf("%d", strlen(str));
 	
 	return 0;
 }
